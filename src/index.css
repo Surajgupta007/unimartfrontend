@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --font-sans: "Poppins", "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-gray-900 text-gray-50;
+  }
+}
+
+/* Login Page Styles */
+.login-container {
+  @apply min-h-screen bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col;
+}
+
+.login-header {
+  @apply flex justify-between items-center px-8 py-6 bg-white;
+}
+
+.login-header h1 {
+  @apply text-4xl font-bold text-slate-800;
+}
+
+.login-logo-section {
+  @apply flex items-center gap-3 cursor-pointer;
+}
+
+.login-logo-text {
+  @apply text-slate-700 font-semibold text-xl;
+}
+
+.login-content {
+  @apply flex-1 flex items-center justify-center px-8 py-12;
+}
+
+.login-wrapper {
+  @apply w-full max-w-6xl grid grid-cols-2 gap-8 items-center;
+}
+
+.login-card {
+  @apply bg-white rounded-3xl p-10 shadow-lg;
+}
+
+.login-card-header {
+  @apply flex items-center gap-3 mb-8;
+}
+
+.login-card-subtitle {
+  @apply text-xs text-slate-500 tracking-wide mb-6;
+}
+
+.login-card-heading {
+  @apply text-3xl font-bold text-slate-800 mb-8 leading-tight;
+}
+
+.login-form-group {
+  @apply mb-6;
+}
+
+.login-form-label {
+  @apply text-sm text-slate-600 mb-2 block font-medium;
+}
+
+.login-form-input {
+  @apply w-full px-4 py-3 border-2 border-slate-300 rounded-full focus:outline-none focus:border-teal-500 transition-colors text-slate-700 placeholder-slate-400;
+}
+
+.login-form-input:focus {
+  @apply border-teal-500 shadow-sm;
+}
+
+.login-form-password {
+  @apply flex items-center gap-2 relative;
+}
+
+.login-checkbox-group {
+  @apply flex items-center justify-between mb-6 text-sm;
+}
+
+.login-checkbox {
+  @apply w-4 h-4 accent-slate-600;
+}
+
+.login-checkbox-label {
+  @apply text-slate-600 font-medium;
+}
+
+.login-forgot-password {
+  @apply text-teal-600 hover:text-teal-700 font-medium transition-colors;
+}
+
+.login-button {
+  @apply w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 mb-4;
+}
+
+.login-register-section {
+  @apply text-center text-sm;
+}
+
+.login-register-text {
+  @apply text-slate-600;
+}
+
+.login-register-link {
+  @apply text-teal-600 hover:text-teal-700 font-semibold transition-colors;
+}
+
+.login-illustration {
+  @apply flex items-center justify-center;
+}
+
+.login-illustration-bg {
+  @apply relative w-full h-96 bg-gradient-to-b from-teal-700 via-teal-600 to-slate-700 rounded-3xl overflow-hidden flex items-center justify-center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-wrapper {
+    @apply grid-cols-1;
+  }
+
+  .login-header h1 {
+    @apply text-2xl;
+  }
+
+  .login-card {
+    @apply p-6;
+  }
+
+  .login-card-heading {
+    @apply text-2xl;
+  }
+
+  .login-header {
+    @apply flex-col gap-4 text-center;
+  }
+}
